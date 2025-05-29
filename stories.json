@@ -1,0 +1,501 @@
+{
+  "stories": [
+    {
+      "id": "web-developer-journey",
+      "title": "Perjalanan Web Developer",
+      "description": "Ikuti kisah seorang developer pemula yang belajar web development",
+      "difficulty": "easy",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Hari Pertama",
+          "story": "Andi baru saja memulai karirnya sebagai web developer. Hari ini adalah hari pertamanya di kantor. Mentor memberikan tugas pertama: membuat halaman web sederhana.",
+          "questions": [
+            {
+              "question": "Tag HTML apa yang digunakan untuk membuat judul utama?",
+              "choices": ["<h1>", "<title>", "<header>", "<head>"],
+              "answer": "<h1>",
+              "explanation": "Tag <h1> digunakan untuk heading utama dalam HTML"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Mempelajari CSS",
+          "story": "Setelah berhasil membuat HTML dasar, Andi diminta untuk mempercantik tampilan website dengan CSS. Mentor menjelaskan bahwa CSS adalah bahasa untuk styling.",
+          "questions": [
+            {
+              "question": "Properti CSS apa yang digunakan untuk mengubah warna teks?",
+              "choices": [
+                "background-color",
+                "color",
+                "text-color",
+                "font-color"
+              ],
+              "answer": "color",
+              "explanation": "Properti 'color' dalam CSS digunakan untuk mengatur warna teks"
+            },
+            {
+              "question": "Bagaimana cara menghubungkan file CSS eksternal ke HTML?",
+              "choices": [
+                "<css src='style.css'>",
+                "<link rel='stylesheet' href='style.css'>",
+                "<style src='style.css'>",
+                "<import css='style.css'>"
+              ],
+              "answer": "<link rel='stylesheet' href='style.css'>",
+              "explanation": "Tag <link> dengan atribut rel='stylesheet' digunakan untuk menghubungkan CSS eksternal"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "JavaScript Pertama",
+          "story": "Minggu ketiga, Andi mulai belajar JavaScript untuk membuat website interaktif. Mentor memberikan tugas membuat tombol yang bisa diklik.",
+          "questions": [
+            {
+              "question": "Method JavaScript apa yang digunakan untuk menampilkan pesan pop-up?",
+              "choices": ["console.log()", "alert()", "prompt()", "confirm()"],
+              "answer": "alert()",
+              "explanation": "Method alert() digunakan untuk menampilkan pesan dalam pop-up dialog"
+            },
+            {
+              "question": "Bagaimana cara mendapatkan elemen HTML berdasarkan ID menggunakan JavaScript?",
+              "choices": [
+                "document.getElement('id')",
+                "document.getElementById('id')",
+                "document.findById('id')",
+                "document.selectId('id')"
+              ],
+              "answer": "document.getElementById('id')",
+              "explanation": "Method getElementById() digunakan untuk mendapatkan elemen berdasarkan ID"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "data-scientist-adventure",
+      "title": "Petualangan Data Scientist",
+      "description": "Bergabunglah dengan Maya dalam perjalanannya menjadi data scientist profesional",
+      "difficulty": "medium",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Pengenalan Data",
+          "story": "Maya baru bergabung dengan tim data science di perusahaan e-commerce. Tugas pertamanya adalah menganalisis data penjualan untuk mencari pola tersembunyi.",
+          "questions": [
+            {
+              "question": "Apa yang dimaksud dengan 'data cleaning' dalam data science?",
+              "choices": [
+                "Menghapus semua data",
+                "Membersihkan data dari error dan inconsistency",
+                "Menyortir data",
+                "Mengenkripsi data"
+              ],
+              "answer": "Membersihkan data dari error dan inconsistency",
+              "explanation": "Data cleaning adalah proses membersihkan data dari kesalahan, duplikasi, dan inkonsistensi"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Eksplorasi Data",
+          "story": "Maya mulai mengeksplorasi dataset penjualan. Dia menemukan beberapa pola menarik dalam data dan mulai membuat visualisasi untuk presentasi.",
+          "questions": [
+            {
+              "question": "Library Python mana yang paling populer untuk visualisasi data?",
+              "choices": ["NumPy", "Pandas", "Matplotlib", "Scikit-learn"],
+              "answer": "Matplotlib",
+              "explanation": "Matplotlib adalah library Python yang paling umum digunakan untuk membuat visualisasi data"
+            },
+            {
+              "question": "Apa kepanjangan dari EDA dalam data science?",
+              "choices": [
+                "Electronic Data Analysis",
+                "Exploratory Data Analysis",
+                "Extended Data Algorithm",
+                "Estimated Data Accuracy"
+              ],
+              "answer": "Exploratory Data Analysis",
+              "explanation": "EDA stands for Exploratory Data Analysis, yaitu proses mengeksplorasi dan memahami data"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Machine Learning Pertama",
+          "story": "Setelah memahami data, Maya diminta membuat model prediksi sederhana. Dia memilih algoritma linear regression untuk memprediksi penjualan.",
+          "questions": [
+            {
+              "question": "Apa perbedaan utama antara supervised dan unsupervised learning?",
+              "choices": [
+                "Supervised menggunakan data berlabel, unsupervised tidak",
+                "Supervised lebih akurat",
+                "Unsupervised lebih cepat",
+                "Tidak ada perbedaan"
+              ],
+              "answer": "Supervised menggunakan data berlabel, unsupervised tidak",
+              "explanation": "Supervised learning menggunakan data dengan label target, sedangkan unsupervised learning tidak"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mobile-app-creator",
+      "title": "Pembuat Aplikasi Mobile",
+      "description": "Ikuti Reza dalam perjalanannya mengembangkan aplikasi mobile pertama",
+      "difficulty": "medium",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Ide Aplikasi",
+          "story": "Reza memiliki ide untuk membuat aplikasi to-do list yang unik. Dia mulai merencanakan fitur-fitur yang akan ada dalam aplikasinya.",
+          "questions": [
+            {
+              "question": "Apa yang dimaksud dengan wireframe dalam pengembangan aplikasi?",
+              "choices": [
+                "Kode program",
+                "Sketsa layout aplikasi",
+                "Database design",
+                "Testing plan"
+              ],
+              "answer": "Sketsa layout aplikasi",
+              "explanation": "Wireframe adalah sketsa atau blueprint yang menunjukkan struktur dan layout aplikasi"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Memilih Platform",
+          "story": "Reza harus memutuskan apakah akan membuat aplikasi native atau cross-platform. Setelah riset, dia memilih React Native untuk efisiensi.",
+          "questions": [
+            {
+              "question": "Apa keuntungan utama menggunakan React Native?",
+              "choices": [
+                "Hanya untuk iOS",
+                "Hanya untuk Android",
+                "Satu kode untuk multiple platform",
+                "Hanya untuk web"
+              ],
+              "answer": "Satu kode untuk multiple platform",
+              "explanation": "React Native memungkinkan pengembangan aplikasi untuk iOS dan Android dengan satu codebase"
+            },
+            {
+              "question": "Bahasa pemrograman apa yang digunakan React Native?",
+              "choices": ["Java", "Swift", "JavaScript", "Kotlin"],
+              "answer": "JavaScript",
+              "explanation": "React Native menggunakan JavaScript sebagai bahasa pemrograman utama"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "UI/UX Design",
+          "story": "Reza mulai mendesain antarmuka aplikasinya. Dia mempelajari prinsip-prinsip UI/UX untuk membuat aplikasi yang user-friendly.",
+          "questions": [
+            {
+              "question": "Apa prinsip utama dalam UX design?",
+              "choices": [
+                "Warna yang menarik",
+                "User-centered design",
+                "Animasi yang banyak",
+                "Font yang unik"
+              ],
+              "answer": "User-centered design",
+              "explanation": "UX design berfokus pada kebutuhan dan pengalaman pengguna (user-centered design)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity-defender",
+      "title": "Pembela Keamanan Siber",
+      "description": "Bergabunglah dengan Alex dalam misi melindungi sistem dari ancaman cyber",
+      "difficulty": "hard",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Ancaman Terdeteksi",
+          "story": "Alex adalah seorang cybersecurity analyst yang baru saja mendeteksi aktivitas mencurigakan di jaringan perusahaan. Log menunjukkan ada upaya penetrasi.",
+          "questions": [
+            {
+              "question": "Apa yang dimaksud dengan penetration testing?",
+              "choices": [
+                "Menghapus virus",
+                "Simulasi serangan untuk menemukan kelemahan",
+                "Install antivirus",
+                "Update software"
+              ],
+              "answer": "Simulasi serangan untuk menemukan kelemahan",
+              "explanation": "Penetration testing adalah simulasi serangan siber untuk mengidentifikasi kerentanan sistem"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Analisis Malware",
+          "story": "Alex menemukan file yang diduga malware. Dia harus menganalisis file tersebut di lingkungan yang aman untuk memahami cara kerjanya.",
+          "questions": [
+            {
+              "question": "Apa itu sandbox dalam konteks cybersecurity?",
+              "choices": [
+                "Tempat bermain",
+                "Lingkungan terisolasi untuk testing",
+                "Jenis antivirus",
+                "Protocol jaringan"
+              ],
+              "answer": "Lingkungan terisolasi untuk testing",
+              "explanation": "Sandbox adalah lingkungan terisolasi yang aman untuk menganalisis malware atau kode mencurigakan"
+            },
+            {
+              "question": "Apa kepanjangan dari SIEM?",
+              "choices": [
+                "Security Information and Event Management",
+                "System Integration and Error Monitoring",
+                "Software Installation and Equipment Management",
+                "Security Intelligence and Encryption Method"
+              ],
+              "answer": "Security Information and Event Management",
+              "explanation": "SIEM adalah sistem untuk mengumpulkan dan menganalisis data keamanan dari berbagai sumber"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Incident Response",
+          "story": "Serangan siber berhasil dideteksi dan dihentikan. Alex harus membuat laporan incident dan merekomendasikan langkah pencegahan untuk masa depan.",
+          "questions": [
+            {
+              "question": "Apa tahap pertama dalam incident response?",
+              "choices": [
+                "Recovery",
+                "Identification",
+                "Containment",
+                "Eradication"
+              ],
+              "answer": "Identification",
+              "explanation": "Identification adalah tahap pertama untuk mendeteksi dan mengkonfirmasi adanya insiden keamanan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-researcher-quest",
+      "title": "Pencarian Peneliti AI",
+      "description": "Ikuti Dr. Sarah dalam penelitiannya mengembangkan AI yang revolusioner",
+      "difficulty": "hard",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Neural Network Dasar",
+          "story": "Dr. Sarah memulai proyek penelitian untuk mengembangkan sistem AI yang dapat memahami bahasa natural dengan lebih baik. Langkah pertama adalah membangun neural network.",
+          "questions": [
+            {
+              "question": "Apa fungsi activation function dalam neural network?",
+              "choices": [
+                "Menyimpan data",
+                "Menentukan output neuron",
+                "Menghitung error",
+                "Mengatur learning rate"
+              ],
+              "answer": "Menentukan output neuron",
+              "explanation": "Activation function menentukan apakah neuron akan 'aktif' atau tidak berdasarkan input yang diterima"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Deep Learning",
+          "story": "Sarah beralih ke deep learning untuk meningkatkan performa modelnya. Dia menggunakan teknik CNN dan RNN untuk memproses data yang kompleks.",
+          "questions": [
+            {
+              "question": "Apa kepanjangan dari CNN dalam deep learning?",
+              "choices": [
+                "Computer Neural Network",
+                "Convolutional Neural Network",
+                "Connected Node Network",
+                "Circular Neural Network"
+              ],
+              "answer": "Convolutional Neural Network",
+              "explanation": "CNN (Convolutional Neural Network) adalah arsitektur yang efektif untuk memproses data gambar"
+            },
+            {
+              "question": "Kapan sebaiknya menggunakan RNN?",
+              "choices": [
+                "Untuk data gambar",
+                "Untuk data sequential/time series",
+                "Untuk data tabular",
+                "Untuk clustering"
+              ],
+              "answer": "Untuk data sequential/time series",
+              "explanation": "RNN (Recurrent Neural Network) cocok untuk data berurutan seperti teks atau time series"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Model Deployment",
+          "story": "Setelah model AI selesai dilatih, Sarah harus men-deploy model tersebut agar bisa digunakan oleh aplikasi lain melalui API.",
+          "questions": [
+            {
+              "question": "Apa yang dimaksud dengan model inference?",
+              "choices": [
+                "Proses training model",
+                "Proses membuat prediksi dengan model yang sudah dilatih",
+                "Proses evaluasi model",
+                "Proses preprocessing data"
+              ],
+              "answer": "Proses membuat prediksi dengan model yang sudah dilatih",
+              "explanation": "Model inference adalah fase dimana model yang sudah dilatih digunakan untuk membuat prediksi pada data baru"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devops-engineer-mission",
+      "title": "Misi DevOps Engineer",
+      "description": "Bergabunglah dengan Kevin dalam mengoptimalkan deployment dan infrastruktur",
+      "difficulty": "medium",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "CI/CD Pipeline",
+          "story": "Kevin diminta untuk mengatur CI/CD pipeline untuk tim development. Tujuannya adalah mengotomatisasi proses testing dan deployment.",
+          "questions": [
+            {
+              "question": "Apa kepanjangan dari CI/CD?",
+              "choices": [
+                "Computer Integration/Computer Deployment",
+                "Continuous Integration/Continuous Deployment",
+                "Code Integration/Code Delivery",
+                "Central Integration/Central Distribution"
+              ],
+              "answer": "Continuous Integration/Continuous Deployment",
+              "explanation": "CI/CD adalah praktik untuk mengintegrasikan dan men-deploy kode secara berkelanjutan"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Containerization",
+          "story": "Untuk memudahkan deployment, Kevin menggunakan Docker untuk mengemas aplikasi dalam container. Ini memastikan aplikasi berjalan konsisten di berbagai environment.",
+          "questions": [
+            {
+              "question": "Apa keuntungan utama menggunakan Docker?",
+              "choices": [
+                "Hanya untuk Linux",
+                "Aplikasi berjalan konsisten di berbagai environment",
+                "Hanya untuk web application",
+                "Mengurangi ukuran aplikasi"
+              ],
+              "answer": "Aplikasi berjalan konsisten di berbagai environment",
+              "explanation": "Docker memastikan aplikasi berjalan sama di development, testing, dan production environment"
+            },
+            {
+              "question": "Apa perbedaan Docker container dan virtual machine?",
+              "choices": [
+                "Tidak ada perbedaan",
+                "Container lebih ringan dan share OS kernel",
+                "VM lebih cepat",
+                "Container hanya untuk Linux"
+              ],
+              "answer": "Container lebih ringan dan share OS kernel",
+              "explanation": "Container berbagi OS kernel host dan lebih efisien resource dibanding VM yang memiliki OS sendiri"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "Monitoring dan Logging",
+          "story": "Kevin setup sistem monitoring untuk memastikan aplikasi berjalan dengan baik di production. Dia menggunakan tools seperti Prometheus dan Grafana.",
+          "questions": [
+            {
+              "question": "Mengapa monitoring penting dalam DevOps?",
+              "choices": [
+                "Untuk membuat aplikasi lebih cepat",
+                "Untuk mendeteksi masalah sebelum user terpengaruh",
+                "Untuk mengurangi biaya",
+                "Untuk compliance"
+              ],
+              "answer": "Untuk mendeteksi masalah sebelum user terpengaruh",
+              "explanation": "Monitoring memungkinkan deteksi dini masalah sehingga dapat diatasi sebelum berdampak pada pengguna"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blockchain-developer-saga",
+      "title": "Saga Blockchain Developer",
+      "description": "Ikuti Dimas dalam perjalanannya membangun aplikasi blockchain",
+      "difficulty": "hard",
+      "chapters": [
+        {
+          "id": 1,
+          "title": "Smart Contract Pertama",
+          "story": "Dimas mulai belajar blockchain development dengan membuat smart contract sederhana di Ethereum. Contract pertamanya adalah sistem voting yang transparan.",
+          "questions": [
+            {
+              "question": "Bahasa pemrograman apa yang umum digunakan untuk Ethereum smart contract?",
+              "choices": ["JavaScript", "Python", "Solidity", "Java"],
+              "answer": "Solidity",
+              "explanation": "Solidity adalah bahasa pemrograman yang dirancang khusus untuk menulis smart contract di Ethereum"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Gas dan Transaction",
+          "story": "Dimas mempelajari konsep gas dalam Ethereum dan cara mengoptimalkan smart contract agar efisien dalam penggunaan gas.",
+          "questions": [
+            {
+              "question": "Apa itu gas dalam konteks Ethereum?",
+              "choices": [
+                "Jenis cryptocurrency",
+                "Unit untuk mengukur computational effort",
+                "Nama blockchain",
+                "Jenis wallet"
+              ],
+              "answer": "Unit untuk mengukur computational effort",
+              "explanation": "Gas adalah unit yang mengukur jumlah computational work yang diperlukan untuk menjalankan operasi di Ethereum"
+            },
+            {
+              "question": "Mengapa diperlukan gas fee dalam blockchain?",
+              "choices": [
+                "Untuk keuntungan developer",
+                "Untuk mencegah spam dan membayar miner/validator",
+                "Untuk marketing",
+                "Tidak ada alasan khusus"
+              ],
+              "answer": "Untuk mencegah spam dan membayar miner/validator",
+              "explanation": "Gas fee mencegah spam transaction dan memberikan insentif kepada miner/validator untuk memproses transaksi"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "title": "DeFi Application",
+          "story": "Dimas mengembangkan aplikasi DeFi (Decentralized Finance) yang memungkinkan user untuk lending dan borrowing cryptocurrency secara terdesentralisasi.",
+          "questions": [
+            {
+              "question": "Apa kepanjangan dari DeFi?",
+              "choices": [
+                "Digital Finance",
+                "Decentralized Finance",
+                "Distributed Finance",
+                "Direct Finance"
+              ],
+              "answer": "Decentralized Finance",
+              "explanation": "DeFi adalah sistem keuangan yang beroperasi tanpa perantara tradisional menggunakan smart contract"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

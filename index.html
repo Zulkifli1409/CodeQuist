@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <title>CodeQuiz - Uji Wawasan Teknologi</title>
+    
+    <!-- SEO -->
+    <meta name="description" content="Uji pengetahuan teknologi kamu dengan kuis interaktif di CodeQuiz! Cocok untuk pelajar, mahasiswa, dan profesional TI." />
+    <meta name="keywords" content="quiz teknologi, uji pengetahuan IT, CodeQuiz, kuis IT, belajar teknologi, kuis interaktif" />
+    <meta name="author" content="CodeQuiz Team" />
+  
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  
+    <!-- Font dan Icons (optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Floating particles background */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: float 6s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+      50% { transform: translateY(-100px) rotate(180deg); opacity: 1; }
+    }
+
+    /* Main container */
+    .app-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .quiz-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 40px;
+      border-radius: 25px;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quiz-container::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+      animation: rotate 10s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Header */
+    .quiz-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .quiz-title {
+      font-size: 3rem;
+      font-weight: bold;
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradient 3s ease infinite;
+      margin-bottom: 10px;
+    }
+
+    @keyframes gradient {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .quiz-subtitle {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      animation: fadeInUp 1s ease-out 0.5s both;
+    }
+
+    /* Game Stats */
+    .game-stats {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+
+    .stat-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px 15px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .stat-highlight {
+      color: #4ecdc4;
+      font-weight: bold;
+    }
+
+    /* Difficulty Selector */
+    .difficulty-selector {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .difficulty-title {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .difficulty-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .difficulty-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .difficulty-btn:hover, .difficulty-btn.active {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: #4ecdc4;
+      transform: translateY(-2px);
+    }
+
+    /* Progress bar */
+    .progress-container {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+      border-radius: 4px;
+      width: 0%;
+      transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+    }
+
+    .progress-bar::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* Question section */
+    .question-section {
+      margin-bottom: 30px;
+    }
+
+    .question-counter {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .question {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 30px;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    /* Choices */
+    .choices {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+      max-width: 650px;
+      margin: 0 auto;
+      height: 220px;
+    }
+
+    .choice-btn {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 15px;
+      border-radius: 15px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      text-align: center;
+      width: 100%;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      word-wrap: break-word;
+      hyphens: auto;
+      line-height: 1.3;
+    }
+
+    .choice-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.6s;
+    }
+
+    .choice-btn:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .choice-btn:hover::before {
+      left: 100%;
+    }
+
+    .choice-btn:active {
+      transform: translateY(-2px);
+    }
+
+    .choice-btn.correct {
+      background: linear-gradient(135deg, #4CAF50, #45a049);
+      border-color: #4CAF50;
+      animation: correctPulse 0.6s ease-out;
+    }
+
+    .choice-btn.incorrect {
+      background: linear-gradient(135deg, #f44336, #d32f2f);
+      border-color: #f44336;
+      animation: shake 0.6s ease-out;
+    }
+
+    .choice-btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    @keyframes correctPulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(76, 175, 80, 0.6); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); }
+    }
+
+    /* Timer */
+    .timer-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    .timer {
+      background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+      padding: 15px 25px;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(238, 90, 82, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timer.warning {
+      animation: timerWarning 1s infinite;
+    }
+
+    @keyframes timerWarning {
+      0%, 100% { background: linear-gradient(135deg, #ff6b6b, #ee5a52); }
+      50% { background: linear-gradient(135deg, #ff9800, #f57c00); }
+    }
+
+    /* Power-ups */
+    .powerups-container {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .powerup-btn {
+      background: linear-gradient(135deg, #9c27b0, #673ab7);
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1.2rem;
+      position: relative;
+    }
+
+    .powerup-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(156, 39, 176, 0.4);
+    }
+
+    .powerup-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .powerup-count {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      background: #ff4444;
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Streak indicator */
+    .streak-container {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    .streak-flame {
+      font-size: 1.5rem;
+      animation: flicker 1s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 0.8; }
+      100% { opacity: 1; }
+    }
+
+    /* Result section */
+    .result-section {
+      text-align: center;
+      animation: fadeInScale 0.8s ease-out;
+    }
+
+    .result-title {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .score-display {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 30px 0;
+      position: relative;
+    }
+
+    .score-circle {
+      width: 200px;
+      height: 200px;
+      border: 8px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 30px auto;
+      position: relative;
+      animation: rotateIn 1s ease-out;
+    }
+
+    .score-circle::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+      border-radius: 50%;
+      border: 8px solid transparent;
+      border-top-color: #4ecdc4;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes rotateIn {
+      0% { transform: rotate(-360deg) scale(0); opacity: 0; }
+      100% { transform: rotate(0deg) scale(1); opacity: 1; }
+    }
+
+    .achievement-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+
+    .achievement {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 15px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .achievement.unlocked {
+      background: linear-gradient(135deg, #ffd700, #ffb000);
+      color: #333;
+      animation: achievementPulse 0.8s ease-out;
+    }
+
+    @keyframes achievementPulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .restart-btn, .share-btn {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border: none;
+      color: white;
+      padding: 15px 40px;
+      border-radius: 25px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+      margin: 10px;
+    }
+
+    .share-btn {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+    }
+
+    .restart-btn:hover, .share-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+    }
+
+    /* Settings panel */
+    .settings-panel {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: 15px;
+      padding: 15px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      z-index: 100;
+    }
+
+    .settings-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .settings-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: rotate(90deg);
+    }
+
+    .settings-content {
+      display: none;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .settings-content.active {
+      display: block;
+    }
+
+    .setting-item {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.9rem;
+    }
+
+    .toggle-switch {
+      position: relative;
+      width: 40px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .toggle-switch.active {
+      background: #4ecdc4;
+    }
+
+    .toggle-switch::after {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .toggle-switch.active::after {
+      left: 22px;
+    }
+
+    /* Animations */
+    .hidden {
+      display: none;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .slide-in-right {
+      animation: slideInRight 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .slide-out-left {
+      animation: slideOutLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInScale {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes slideInRight {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes slideOutLeft {
+      from { transform: translateX(0); opacity: 1; }
+      to { transform: translateX(-100%); opacity: 0; }
+    }
+
+    /* Sound wave animation */
+    .sound-wave {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .wave-bar {
+      width: 3px;
+      height: 15px;
+      background: #4ecdc4;
+      animation: wave 1s infinite ease-in-out;
+    }
+
+    .wave-bar:nth-child(2) { animation-delay: 0.1s; }
+    .wave-bar:nth-child(3) { animation-delay: 0.2s; }
+    .wave-bar:nth-child(4) { animation-delay: 0.3s; }
+
+    @keyframes wave {
+      0%, 100% { height: 15px; }
+      50% { height: 5px; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .quiz-container {
+        padding: 20px;
+        margin: 10px;
+      }
+
+      .quiz-title {
+        font-size: 2rem;
+      }
+
+      .question {
+        font-size: 1.2rem;
+      }
+
+      .choices {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        height: 360px;
+        gap: 15px;
+      }
+
+      .choice-btn {
+        padding: 12px;
+        font-size: 0.95rem;
+        height: 80px;
+      }
+
+      .settings-panel {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-bottom: 20px;
+      }
+
+      .game-stats {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .powerups-container {
+        flex-wrap: wrap;
+      }
+    }
+
+    /* Story Mode Styles */
+.story-selector {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.mode-switcher {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mode-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.mode-btn:hover, .mode-btn.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #4ecdc4;
+  transform: translateY(-2px);
+}
+
+.story-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.story-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  border-color: #4ecdc4;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.story-card h4 {
+  color: #4ecdc4;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.story-card p {
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.story-section {
+  margin-bottom: 30px;
+}
+
+.story-progress {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.chapter-indicator {
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.story-content {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chapter-title {
+  color: #4ecdc4;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.story-text {
+  line-height: 1.8;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.continue-btn {
+  background: linear-gradient(135deg, #4ecdc4, #44a08d);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.continue-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(78, 205, 196, 0.3);
+}
+  </style>
+</head>
+<body>
+  <!-- Settings Panel -->
+  <div class="settings-panel">
+    <button class="settings-btn" onclick="toggleSettings()">⚙️</button>
+    <div class="settings-content" id="settings-content">
+      <div class="setting-item">
+        <span>Sound Effects</span>
+        <div class="toggle-switch active" id="sound-toggle" onclick="toggleSound()"></div>
+      </div>
+      <div class="setting-item">
+        <span>Animations</span>
+        <div class="toggle-switch active" id="animation-toggle" onclick="toggleAnimations()"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating particles -->
+  <div class="particles" id="particles"></div>
+
+  <div class="app-container">
+    <div class="quiz-container">
+      <!-- Quiz Header -->
+      <div class="quiz-header fade-in">
+        <h1 class="quiz-title">🧠 CodeQuiz</h1>
+        <p class="quiz-subtitle">Uji Wawasan Teknologi Anda</p>
+      </div>
+
+      <!-- Game Stats -->
+      <div class="game-stats" id="game-stats">
+        <div class="stat-item">
+          💯 Best: <span class="stat-highlight" id="best-score">0</span>
+        </div>
+        <div class="stat-item">
+          🎯 Akurasi: <span class="stat-highlight" id="accuracy">0%</span>
+        </div>
+        <div class="stat-item">
+          🎮 Games: <span class="stat-highlight" id="games-played">0</span>
+        </div>
+      </div>
+
+      <!-- Difficulty Selector -->
+      <div class="difficulty-selector" id="difficulty-selector">
+        <div class="difficulty-title">Pilih Tingkat Kesulitan:</div>
+        <div class="difficulty-buttons">
+          <button class="difficulty-btn active" onclick="setDifficulty('easy')">🟢 Mudah</button>
+          <button class="difficulty-btn" onclick="setDifficulty('medium')">🟡 Sedang</button>
+          <button class="difficulty-btn" onclick="setDifficulty('hard')">🔴 Sulit</button>
+        </div>
+      </div>
+
+      <!-- Story Mode Selector -->
+<div class="story-selector" id="story-selector">
+  <div class="mode-switcher">
+    <button class="mode-btn" onclick="switchMode('story')">📖 Mode Cerita</button>
+  </div>
+  
+  <div class="story-list hidden" id="story-list">
+    <h3>Pilih Cerita:</h3>
+    <div class="story-cards" id="story-cards"></div>
+  </div>
+</div>
+
+<!-- Story Display -->
+<div id="story-section" class="story-section hidden">
+  <div class="story-progress">
+    <div class="chapter-indicator" id="chapter-indicator">Chapter 1 of 3</div>
+  </div>
+  
+  <div class="story-content">
+    <h3 class="chapter-title" id="chapter-title"></h3>
+    <div class="story-text" id="story-text"></div>
+    <button class="continue-btn" id="continue-btn" onclick="startChapterQuiz()">Lanjutkan Quiz 📚</button>
+  </div>
+</div>
+
+      <!-- Quiz Section -->
+      <div id="quiz-section" class="fade-in hidden">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <!-- Question Counter -->
+        <div class="question-counter" id="question-counter">
+          Pertanyaan 1 dari 5
+        </div>
+
+        <!-- Streak -->
+        <div class="streak-container" id="streak-container">
+          <div class="streak-flame">🔥</div>
+          <div>Streak: <span id="streak-count">0</span></div>
+        </div>
+
+        <!-- Question -->
+        <div class="question-section">
+          <div id="question" class="question"></div>
+        </div>
+
+        <!-- Timer -->
+        <div class="timer-container">
+          <div id="timer" class="timer">Waktu: 15</div>
+        </div>
+
+        <!-- Power-ups -->
+        <div class="powerups-container" id="powerups-container">
+          <button class="powerup-btn" id="fifty-fifty" onclick="usePowerup('fiftyFifty')" title="50:50">
+            ⚡
+            <span class="powerup-count">3</span>
+          </button>
+          <button class="powerup-btn" id="extra-time" onclick="usePowerup('extraTime')" title="Tambah Waktu">
+            ⏱️
+            <span class="powerup-count">2</span>
+          </button>
+          <button class="powerup-btn" id="skip-question" onclick="usePowerup('skip')" title="Skip Pertanyaan">
+            ⏭️
+            <span class="powerup-count">1</span>
+          </button>
+        </div>
+
+        <!-- Choices -->
+        <ul id="choices" class="choices"></ul>
+      </div>
+
+      <!-- Result Section -->
+      <div id="result-section" class="result-section hidden">
+        <h2 class="result-title">🎉 Quiz Selesai!</h2>
+        <div class="score-circle">
+          <div class="score-display" id="final-score">0/5</div>
+        </div>
+        
+        <div class="achievement-grid" id="achievement-grid">
+          <div class="achievement" id="perfect-score">
+            <div>🏆</div>
+            <div>Perfect!</div>
+          </div>
+          <div class="achievement" id="speed-demon">
+            <div>⚡</div>
+            <div>Speed Demon</div>
+          </div>
+          <div class="achievement" id="streak-master">
+            <div>🔥</div>
+            <div>Streak Master</div>
+          </div>
+          <div class="achievement" id="no-powerups">
+            <div>💪</div>
+            <div>Pure Skill</div>
+          </div>
+        </div>
+
+        <div>
+          <button onclick="restartQuiz()" class="restart-btn">🔄 Coba Lagi</button>
+          <button onclick="shareScore()" class="share-btn">📤 Bagikan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+// Enhanced game state
+let questions = [];
+let currentQuestionIndex = 0;
+let score = 0;
+let timer;
+let timeLeft = 15;
+let isAnswered = false;
+let difficulty = 'easy';
+let streak = 0;
+let maxStreak = 0;
+let totalQuestions = 0;
+let correctAnswers = 0;
+let gamesPlayed = 0;
+let bestScore = 0;
+let usedPowerups = false;
+let fastAnswers = 0;
+let stories = [];
+let currentStory = null;
+let currentChapter = 0;
+let gameMode = 'classic';  // 'classic' or 'story'
+
+// Settings
+let soundEnabled = true;
+let animationsEnabled = true;
+
+// Power-ups
+let powerups = {
+  fiftyFifty: 3,
+  extraTime: 2,
+  skip: 1
+};
+
+// DOM elements
+const questionEl = document.getElementById("question");
+const choicesEl = document.getElementById("choices");
+const timerEl = document.getElementById("timer");
+const quizSection = document.getElementById("quiz-section");
+const resultSection = document.getElementById("result-section");
+const finalScoreEl = document.getElementById("final-score");
+const progressBar = document.getElementById("progress-bar");
+const questionCounter = document.getElementById("question-counter");
+const difficultySelector = document.getElementById("difficulty-selector");
+const streakCount = document.getElementById("streak-count");
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+  createParticles();
+  loadGameStats();
+  loadQuestions();
+  loadStories();
+});
+
+// Load questions from JSON file
+async function loadQuestions() {
+  try {
+    const response = await fetch('questions.json');
+    const questionsData = await response.json();
+
+    const shuffled = questionsData[difficulty].sort(() => 0.5 - Math.random());
+    questions = shuffled.slice(0, Math.min(10, shuffled.length));
+    totalQuestions = questions.length;
+
+    console.log(`Loaded ${questions.length} questions for ${difficulty} difficulty`);
+  } catch (error) {
+    console.error('Error loading questions:', error);
+
+    // Fallback questions if JSON file fails to load
+    const fallbackQuestions = {
+      easy: [
+        {
+          question: "Apa itu HTML?",
+          choices: ["Bahasa markup", "Bahasa pemrograman", "Database", "Sistem operasi"],
+          answer: "Bahasa markup"
+        },
+        {
+          question: "Fungsi utama dari CSS?",
+          choices: ["Logika program", "Gaya tampilan", "Menyimpan data", "Menjalankan server"],
+          answer: "Gaya tampilan"
+        }
+      ],
+      medium: [
+        {
+          question: "Apa perbedaan antara '==' dan '===' di JavaScript?",
+          choices: ["Tidak ada perbedaan", "=== lebih cepat", "=== memeriksa tipe data", "== untuk angka saja"],
+          answer: "=== memeriksa tipe data"
+        }
+      ],
+      hard: [
+        {
+          question: "Apa itu Big O notation?",
+          choices: ["Bahasa pemrograman", "Kompleksitas algoritma", "Framework web", "Database query"],
+          answer: "Kompleksitas algoritma"
+        }
+      ]
+    };
+
+    const shuffled = fallbackQuestions[difficulty].sort(() => 0.5 - Math.random());
+    questions = shuffled.slice(0, Math.min(10, shuffled.length));
+    totalQuestions = questions.length;
+  }
+}
+// Show the first question
+
+// Load stories
+async function loadStories() {
+  try {
+    const response = await fetch('stories.json');
+    const data = await response.json();
+    stories = data.stories;
+    displayStoryCards();
+  } catch (error) {
+    console.error('Error loading stories:', error);
+    // Fallback story data
+    stories = [{
+      id: "demo-story",
+      title: "Demo Story",
+      description: "Cerita demo untuk testing",
+      difficulty: "easy",
+      chapters: [{
+        id: 1,
+        title: "Chapter 1",
+        story: "Ini adalah cerita demo.",
+        questions: [{
+          question: "Apa itu HTML?",
+          choices: ["Markup Language", "Programming Language", "Database", "OS"],
+          answer: "Markup Language",
+          explanation: "HTML adalah HyperText Markup Language"
+        }]
+      }]
+    }];
+    displayStoryCards();
+  }
+}
+
+// Switch between classic and story mode
+function switchMode(mode) {
+  gameMode = mode;
+  const buttons = document.querySelectorAll('.mode-btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  const storyList = document.getElementById('story-list');
+  const difficultySelector = document.getElementById('difficulty-selector');
+  
+  if (mode === 'story') {
+    storyList.classList.remove('hidden');
+    difficultySelector.style.display = 'none';
+    loadStories();
+  } else {
+    storyList.classList.add('hidden');
+    difficultySelector.style.display = 'block';
+  }
+  
+  playSound('click');
+}
+
+// Display story cards
+function displayStoryCards() {
+  const storyCardsContainer = document.getElementById('story-cards');
+  storyCardsContainer.innerHTML = '';
+  
+  stories.forEach(story => {
+    const card = document.createElement('div');
+    card.className = 'story-card';
+    card.onclick = () => selectStory(story);
+    
+    card.innerHTML = `
+      <h4>${story.title}</h4>
+      <p>${story.description}</p>
+      <div style="margin-top: 15px; font-size: 0.9rem; opacity: 0.7;">
+        📚 ${story.chapters.length} Chapters • ${story.difficulty.toUpperCase()}
+      </div>
+    `;
+    
+    storyCardsContainer.appendChild(card);
+  });
+}
+
+// Select and start story
+function selectStory(story) {
+  currentStory = story;
+  currentChapter = 0;
+  difficulty = story.difficulty;
+  
+  document.getElementById('story-selector').classList.add('hidden');
+  document.getElementById('story-section').classList.remove('hidden');
+  
+  showChapter();
+  playSound('click');
+}
+
+// Show current chapter
+function showChapter() {
+  const chapter = currentStory.chapters[currentChapter];
+  
+  document.getElementById('chapter-indicator').textContent = 
+    `Chapter ${currentChapter + 1} of ${currentStory.chapters.length}`;
+  document.getElementById('chapter-title').textContent = chapter.title;
+  document.getElementById('story-text').textContent = chapter.story;
+}
+
+// Start chapter quiz
+function startChapterQuiz() {
+  const chapter = currentStory.chapters[currentChapter];
+  questions = chapter.questions;
+  totalQuestions = questions.length;
+  
+  document.getElementById('story-section').classList.add('hidden');
+  document.getElementById('quiz-section').classList.remove('hidden');
+  
+  currentQuestionIndex = 0;
+  score = 0;
+  showQuestion();
+}
+
+// Settings functions
+function toggleSettings() {
+  const settingsContent = document.getElementById('settings-content');
+  settingsContent.classList.toggle('active');
+}
+
+function toggleSound() {
+  soundEnabled = !soundEnabled;
+  const toggle = document.getElementById('sound-toggle');
+  toggle.classList.toggle('active');
+  if (soundEnabled) playSound('click');
+}
+
+function toggleAnimations() {
+  animationsEnabled = !animationsEnabled;
+  const toggle = document.getElementById('animation-toggle');
+  toggle.classList.toggle('active');
+  document.body.style.animationPlayState = animationsEnabled ? 'running' : 'paused';
+}
+
+// Sound effects
+function playSound(type) {
+  if (!soundEnabled) return;
+  
+  const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  const oscillator = audioContext.createOscillator();
+  const gainNode = audioContext.createGain();
+  
+  oscillator.connect(gainNode);
+  gainNode.connect(audioContext.destination);
+  
+  switch(type) {
+    case 'correct':
+      oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+      oscillator.frequency.exponentialRampToValueAtTime(1200, audioContext.currentTime + 0.1);
+      break;
+    case 'incorrect':
+      oscillator.frequency.setValueAtTime(300, audioContext.currentTime);
+      oscillator.frequency.exponentialRampToValueAtTime(150, audioContext.currentTime + 0.3);
+      break;
+    case 'tick':
+      oscillator.frequency.setValueAtTime(1000, audioContext.currentTime);
+      break;
+    case 'powerup':
+      oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
+      oscillator.frequency.exponentialRampToValueAtTime(1000, audioContext.currentTime + 0.2);
+      break;
+    case 'click':
+      oscillator.frequency.setValueAtTime(400, audioContext.currentTime);
+      break;
+  }
+  
+  gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+  gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+  
+  oscillator.start(audioContext.currentTime);
+  oscillator.stop(audioContext.currentTime + 0.3);
+}
+
+// Difficulty selection
+async function setDifficulty(level) {
+  difficulty = level;
+  const buttons = document.querySelectorAll('.difficulty-btn');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+  
+  await loadQuestions();
+  playSound('click');
+  
+  // Update timer based on difficulty
+  timeLeft = level === 'easy' ? 20 : level === 'medium' ? 15 : 10;
+}
+
+// Start quiz
+function startQuiz() {
+  difficultySelector.classList.add('hidden');
+  quizSection.classList.remove('hidden');
+  currentQuestionIndex = 0;
+  score = 0;
+  streak = 0;
+  usedPowerups = false;
+  fastAnswers = 0;
+  showQuestion();
+}
+
+// Power-up functions
+function usePowerup(type) {
+  if (powerups[type] <= 0 || isAnswered) return;
+  
+  powerups[type]--;
+  usedPowerups = true;
+  updatePowerupDisplay(type);
+  playSound('powerup');
+  
+  switch(type) {
+    case 'fiftyFifty':
+      fiftyFiftyPowerup();
+      break;
+    case 'extraTime':
+      extraTimePowerup();
+      break;
+    case 'skip':
+      skipQuestionPowerup();
+      break;
+  }
+}
+
+function fiftyFiftyPowerup() {
+  const choices = document.querySelectorAll('.choice-btn');
+  const correctAnswer = questions[currentQuestionIndex].answer;
+  let wrongChoices = Array.from(choices).filter(btn => btn.textContent !== correctAnswer);
+  
+  // Remove 2 wrong answers randomly
+  wrongChoices.sort(() => Math.random() - 0.5);
+  wrongChoices.slice(0, 2).forEach(btn => {
+    btn.style.opacity = '0.3';
+    btn.disabled = true;
+  });
+}
+
+function extraTimePowerup() {
+  timeLeft += 10;
+  timerEl.textContent = `Waktu: ${timeLeft}`;
+  timerEl.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
+  setTimeout(() => {
+    timerEl.style.background = 'linear-gradient(135deg, #ff6b6b, #ee5a52)';
+  }, 1000);
+}
+
+function skipQuestionPowerup() {
+  clearInterval(timer);
+  currentQuestionIndex++;
+  showQuestion();
+}
+
+function updatePowerupDisplay(type) {
+  const powerupBtn = document.getElementById(type === 'fiftyFifty' ? 'fifty-fifty' : type === 'extraTime' ? 'extra-time' : 'skip-question');
+  const countSpan = powerupBtn.querySelector('.powerup-count');
+  countSpan.textContent = powerups[type];
+  
+  if (powerups[type] <= 0) {
+    powerupBtn.disabled = true;
+  }
+}
+
+// Enhanced game stats
+function loadGameStats() {
+  // In a real app, this would load from localStorage
+  // For demo purposes, we'll use default values
+  gamesPlayed = Math.floor(Math.random() * 50) + 1;
+  bestScore = Math.floor(Math.random() * 5) + 1;
+  updateStatsDisplay();
+}
+
+function updateStatsDisplay() {
+  document.getElementById('games-played').textContent = gamesPlayed;
+  document.getElementById('best-score').textContent = bestScore;
+  const accuracy = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+  document.getElementById('accuracy').textContent = accuracy + '%';
+}
+
+// Create floating particles
+function createParticles() {
+  const particlesContainer = document.getElementById('particles');
+  for (let i = 0; i < 50; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.animationDelay = Math.random() * 6 + 's';
+    particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+    particlesContainer.appendChild(particle);
+  }
+}
+
+// Show current question
+function showQuestion() {
+  if (currentQuestionIndex >= questions.length) {
+    showResult();
+    return;
+  }
+
+  const question = questions[currentQuestionIndex];
+  isAnswered = false;
+
+  // Update progress
+  updateProgress();
+  updateQuestionCounter();
+  updateStreakDisplay();
+
+  // Add slide animation
+  if (currentQuestionIndex > 0 && animationsEnabled) {
+    questionEl.classList.add('slide-out-left');
+    setTimeout(() => {
+      displayQuestion(question);
+      questionEl.classList.remove('slide-out-left');
+      questionEl.classList.add('slide-in-right');
+      setTimeout(() => {
+        questionEl.classList.remove('slide-in-right');
+      }, 600);
+    }, 300);
+  } else {
+    displayQuestion(question);
+    if (animationsEnabled) questionEl.classList.add('fade-in');
+  }
+
+  startTimer();
+}
+
+// Display question and choices
+function displayQuestion(question) {
+  questionEl.textContent = question.question;
+  choicesEl.innerHTML = '';
+
+  question.choices.forEach((choice, index) => {
+    const li = document.createElement('li');
+    const button = document.createElement('button');
+    button.className = 'choice-btn';
+    button.textContent = choice;
+    button.onclick = () => selectAnswer(button, question.answer, choice);
+    
+    // Add staggered animation
+    if (animationsEnabled) {
+      button.style.animationDelay = (index * 0.1) + 's';
+      button.classList.add('fade-in');
+    }
+    
+    li.appendChild(button);
+    choicesEl.appendChild(li);
+  });
+}
+
+// Handle answer selection
+function selectAnswer(selectedButton, correctAnswer, selectedChoice) {
+  if (isAnswered) return;
+  
+  isAnswered = true;
+  clearInterval(timer);
+
+  const isCorrect = selectedChoice === correctAnswer;
+  const remainingTime = timeLeft;
+  
+  // Disable all buttons
+  const allButtons = document.querySelectorAll('.choice-btn');
+  allButtons.forEach(btn => btn.disabled = true);
+
+  if (isCorrect) {
+    selectedButton.classList.add('correct');
+    score++;
+    correctAnswers++;
+    streak++;
+    maxStreak = Math.max(maxStreak, streak);
+    
+    // Bonus for fast answers
+    if (remainingTime > (difficulty === 'easy' ? 15 : difficulty === 'medium' ? 10 : 6)) {
+      fastAnswers++;
+    }
+    
+    playSound('correct');
+  } else {
+    selectedButton.classList.add('incorrect');
+    streak = 0;
+    
+    // Highlight correct answer
+    allButtons.forEach(btn => {
+      if (btn.textContent === correctAnswer) {
+        btn.classList.add('correct');
+      }
+    });
+    
+    playSound('incorrect');
+  }
+
+  // Auto-advance to next question after animation
+  setTimeout(() => {
+    currentQuestionIndex++;
+    showQuestion();
+  }, 1500);
+}
+
+// Start timer
+function startTimer() {
+  timeLeft = difficulty === 'easy' ? 20 : difficulty === 'medium' ? 15 : 10;
+  timerEl.textContent = `Waktu: ${timeLeft}`;
+  timerEl.classList.remove('warning');
+
+  timer = setInterval(() => {
+    timeLeft--;
+    timerEl.textContent = `Waktu: ${timeLeft}`;
+
+    if (timeLeft <= 5) {
+      timerEl.classList.add('warning');
+      if (timeLeft <= 3) playSound('tick');
+    }
+
+    if (timeLeft === 0) {
+      handleTimeUp();
+    }
+  }, 1000);
+}
+
+// Handle time up
+function handleTimeUp() {
+  if (isAnswered) return;
+  
+  isAnswered = true;
+  clearInterval(timer);
+  streak = 0;
+
+  const question = questions[currentQuestionIndex];
+  const allButtons = document.querySelectorAll('.choice-btn');
+  
+  // Disable all buttons and highlight correct answer
+  allButtons.forEach(btn => {
+    btn.disabled = true;
+    if (btn.textContent === question.answer) {
+      btn.classList.add('correct');
+    }
+  });
+
+  playSound('incorrect');
+
+  // Auto-advance to next question
+  setTimeout(() => {
+    currentQuestionIndex++;
+    showQuestion();
+  }, 1500);
+}
+
+// Update progress bar
+function updateProgress() {
+  const progress = ((currentQuestionIndex) / questions.length) * 100;
+  progressBar.style.width = progress + '%';
+}
+
+// Update question counter
+function updateQuestionCounter() {
+  questionCounter.textContent = `Pertanyaan ${currentQuestionIndex + 1} dari ${questions.length}`;
+}
+
+// Update streak display
+function updateStreakDisplay() {
+  streakCount.textContent = streak;
+  const streakContainer = document.getElementById('streak-container');
+  if (streak >= 3) {
+    streakContainer.style.display = 'block';
+  } else {
+    streakContainer.style.display = 'none';
+  }
+}
+
+// Show final result
+function showResult() {
+  if (gameMode === 'story') {
+  // Check if there are more chapters
+  if (currentChapter < currentStory.chapters.length - 1) {
+    const nextChapterBtn = document.createElement('button');
+    nextChapterBtn.className = 'restart-btn';
+    nextChapterBtn.textContent = '📖 Chapter Selanjutnya';
+    nextChapterBtn.onclick = () => {
+      currentChapter++;
+      resultSection.classList.add('hidden');
+      document.getElementById('story-section').classList.remove('hidden');
+      showChapter();
+    };
+    
+    // Insert before restart button
+    const restartBtn = document.querySelector('.restart-btn');
+    restartBtn.parentNode.insertBefore(nextChapterBtn, restartBtn);
+  }
+}
+  clearInterval(timer);
+  quizSection.classList.add('hidden');
+  resultSection.classList.remove('hidden');
+  
+  const percentage = Math.round((score / questions.length) * 100);
+  finalScoreEl.textContent = `${score}/${questions.length}`;
+  
+  // Update progress to 100%
+  progressBar.style.width = '100%';
+  
+  // Update game stats
+  gamesPlayed++;
+  if (score > bestScore) bestScore = score;
+  updateStatsDisplay();
+  
+  // Check achievements
+  checkAchievements();
+  
+  // Add celebration effect for high scores
+  if (percentage >= 80) {
+    document.body.style.background = 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)';
+    setTimeout(() => {
+      document.body.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+    }, 3000);
+  }
+}
+
+// Check and display achievements
+function checkAchievements() {
+  const achievements = {
+    'perfect-score': score === questions.length,
+    'speed-demon': fastAnswers >= 3,
+    'streak-master': maxStreak >= 3,
+    'no-powerups': !usedPowerups && score >= 3
+  };
+
+  Object.keys(achievements).forEach(id => {
+    const achievement = document.getElementById(id);
+    if (achievements[id]) {
+      achievement.classList.add('unlocked');
+    }
+  });
+}
+
+// Share score
+function shareScore() {
+  const percentage = Math.round((score / questions.length) * 100);
+  const text = `🧠 Saya berhasil menjawab ${score}/${questions.length} pertanyaan CodeQuiz dengan benar (${percentage}%)! 
+Tingkat kesulitan: ${difficulty.toUpperCase()}
+Streak terbaik: ${maxStreak}
+Coba juga di CodeQuiz!`;
+  
+  if (navigator.share) {
+    navigator.share({
+      title: 'CodeQuiz Score',
+      text: text
+    });
+  } else {
+    // Fallback: copy to clipboard
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Skor berhasil disalin ke clipboard!');
+    });
+  }
+  
+  playSound('click');
+}
+
+// Restart quiz
+async function restartQuiz() {
+  if (gameMode === 'story') {
+  document.getElementById('story-section').classList.add('hidden');
+  document.getElementById('story-selector').classList.remove('hidden');
+  currentStory = null;
+  currentChapter = 0;
+}
+
+  currentQuestionIndex = 0;
+  score = 0;
+  streak = 0;
+  maxStreak = 0;
+  isAnswered = false;
+  usedPowerups = false;
+  fastAnswers = 0;
+  clearInterval(timer);
+  
+  // Reset powerups
+  powerups = {
+    fiftyFifty: 3,
+    extraTime: 2,
+    skip: 1
+  };
+  
+  // Update powerup displays
+  document.querySelectorAll('.powerup-btn').forEach(btn => {
+    btn.disabled = false;
+    const type = btn.id.replace('-', '');
+    const mappedType = type === 'fiftyfifty' ? 'fiftyFifty' : type === 'extratime' ? 'extraTime' : 'skip';
+    btn.querySelector('.powerup-count').textContent = powerups[mappedType];
+  });
+  
+  resultSection.classList.add('hidden');
+  difficultySelector.classList.remove('hidden');
+  
+  progressBar.style.width = '0%';
+  timerEl.classList.remove('warning');
+  
+  // Reset achievements
+  document.querySelectorAll('.achievement').forEach(achievement => {
+    achievement.classList.remove('unlocked');
+  });
+  
+  // Reload questions for current difficulty
+  await loadQuestions();
+  
+  playSound('click');
+}
+
+// Add click handler for starting quiz
+document.querySelectorAll('.difficulty-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    setTimeout(startQuiz, 500);
+  });
+});
+  </script>
+</body>
+</html>

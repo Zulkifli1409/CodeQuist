@@ -1,0 +1,1298 @@
+{
+  "easy": [
+    {
+      "question": "Apa itu HTML?",
+      "choices": [
+        "Bahasa markup",
+        "Bahasa pemrograman",
+        "Database",
+        "Sistem operasi"
+      ],
+      "answer": "Bahasa markup"
+    },
+    {
+      "question": "Fungsi utama dari CSS?",
+      "choices": [
+        "Logika program",
+        "Gaya tampilan",
+        "Menyimpan data",
+        "Menjalankan server"
+      ],
+      "answer": "Gaya tampilan"
+    },
+    {
+      "question": "Manakah yang termasuk library JavaScript?",
+      "choices": ["Laravel", "Bootstrap", "React", "Django"],
+      "answer": "React"
+    },
+    {
+      "question": "Apa kegunaan Git?",
+      "choices": [
+        "Mengelola database",
+        "Mengatur versi kode",
+        "Membuat UI",
+        "Menjalankan server"
+      ],
+      "answer": "Mengatur versi kode"
+    },
+    {
+      "question": "Firebase digunakan untuk?",
+      "choices": [
+        "Deployment",
+        "Database & Autentikasi",
+        "Menulis CSS",
+        "Mengelola domain"
+      ],
+      "answer": "Database & Autentikasi"
+    },
+    {
+      "question": "Apa kepanjangan dari HTTP?",
+      "choices": [
+        "HyperText Transfer Protocol",
+        "High Tech Transfer Process",
+        "Home Tool Transfer Protocol",
+        "Hyper Tech Transport Protocol"
+      ],
+      "answer": "HyperText Transfer Protocol"
+    },
+    {
+      "question": "Bahasa pemrograman mana yang digunakan untuk styling web?",
+      "choices": ["JavaScript", "Python", "CSS", "Java"],
+      "answer": "CSS"
+    },
+    {
+      "question": "Apa fungsi tag <head> dalam HTML?",
+      "choices": [
+        "Menampilkan konten utama",
+        "Menyimpan metadata",
+        "Membuat header halaman",
+        "Mengatur footer"
+      ],
+      "answer": "Menyimpan metadata"
+    },
+    {
+      "question": "Apa kepanjangan dari URL?",
+      "choices": [
+        "Uniform Resource Locator",
+        "Universal Remote Link",
+        "User Resource Link",
+        "Ultimate Resource Locator"
+      ],
+      "answer": "Uniform Resource Locator"
+    },
+    {
+      "question": "Bahasa manakah yang berjalan di sisi klien (client-side)?",
+      "choices": ["PHP", "Python", "JavaScript", "Node.js"],
+      "answer": "JavaScript"
+    },
+    {
+      "question": "Manakah tag HTML untuk membuat tautan?",
+      "choices": ["<p>", "<link>", "<a>", "<href>"],
+      "answer": "<a>"
+    },
+    {
+      "question": "Apa itu CSS?",
+      "choices": [
+        "Cascading Style Sheets",
+        "Code Style Script",
+        "Computer Style Sheet",
+        "Creative Style Syntax"
+      ],
+      "answer": "Cascading Style Sheets"
+    },
+    {
+      "question": "Manakah yang merupakan bahasa backend?",
+      "choices": ["HTML", "CSS", "Java", "React"],
+      "answer": "Java"
+    },
+    {
+      "question": "Apa itu IP Address?",
+      "choices": [
+        "Alamat fisik komputer",
+        "Alamat internet unik",
+        "Alamat MAC",
+        "Alamat email"
+      ],
+      "answer": "Alamat internet unik"
+    },
+    {
+      "question": "Ekstensi file HTML adalah?",
+      "choices": [".txt", ".css", ".html", ".js"],
+      "answer": ".html"
+    },
+    {
+      "question": "Fungsi dari tag <img>?",
+      "choices": [
+        "Membuat paragraf",
+        "Menyisipkan gambar",
+        "Menambahkan script",
+        "Membuat tautan"
+      ],
+      "answer": "Menyisipkan gambar"
+    },
+    {
+      "question": "Apa yang dilakukan tag <br> dalam HTML?",
+      "choices": [
+        "Garis horizontal",
+        "Garis vertikal",
+        "Ganti baris",
+        "Membuat tebal"
+      ],
+      "answer": "Ganti baris"
+    },
+    {
+      "question": "Apa nama dari elemen input dalam form?",
+      "choices": ["<input>", "<textbox>", "<forminput>", "<type>"],
+      "answer": "<input>"
+    },
+    {
+      "question": "Apa fungsi dari JavaScript di web?",
+      "choices": [
+        "Memformat teks",
+        "Menyimpan data",
+        "Menambahkan interaktivitas",
+        "Membuat tabel"
+      ],
+      "answer": "Menambahkan interaktivitas"
+    },
+    {
+      "question": "Framework CSS yang populer adalah?",
+      "choices": ["Laravel", "Bootstrap", "React", "Django"],
+      "answer": "Bootstrap"
+    },
+    {
+      "question": "Apa itu tag <title> digunakan untuk?",
+      "choices": ["Judul halaman", "Konten utama", "Gambar", "Footer"],
+      "answer": "Judul halaman"
+    },
+    {
+      "question": "Apa itu localhost?",
+      "choices": [
+        "Server online",
+        "Alamat komputer sendiri",
+        "IP luar negeri",
+        "Jaringan WiFi"
+      ],
+      "answer": "Alamat komputer sendiri"
+    },
+    {
+      "question": "Tag untuk membuat daftar terurut?",
+      "choices": ["<ul>", "<ol>", "<list>", "<dl>"],
+      "answer": "<ol>"
+    },
+    {
+      "question": "Tag untuk membuat daftar tak terurut?",
+      "choices": ["<ol>", "<ul>", "<li>", "<list>"],
+      "answer": "<ul>"
+    },
+    {
+      "question": "Manakah ekstensi file CSS?",
+      "choices": [".script", ".css", ".html", ".xml"],
+      "answer": ".css"
+    },
+    {
+      "question": "Apa kegunaan browser?",
+      "choices": [
+        "Menjalankan program",
+        "Menjalankan server",
+        "Menampilkan website",
+        "Mengolah data"
+      ],
+      "answer": "Menampilkan website"
+    },
+    {
+      "question": "Tag HTML apa untuk membuat baris baru?",
+      "choices": ["<hr>", "<br>", "<line>", "<row>"],
+      "answer": "<br>"
+    },
+    {
+      "question": "Tag untuk membuat tabel di HTML?",
+      "choices": ["<table>", "<list>", "<tab>", "<data>"],
+      "answer": "<table>"
+    },
+    {
+      "question": "Apa itu responsif dalam desain web?",
+      "choices": [
+        "Cepat loading",
+        "Bisa dibuka di semua perangkat",
+        "Berwarna cerah",
+        "Berfitur banyak"
+      ],
+      "answer": "Bisa dibuka di semua perangkat"
+    },
+    {
+      "question": "Apa itu SEO?",
+      "choices": [
+        "Sistem operasi",
+        "Teknik keamanan",
+        "Optimisasi mesin pencari",
+        "Bahasa pemrograman"
+      ],
+      "answer": "Optimisasi mesin pencari"
+    },
+    {
+      "question": "Tag untuk membuat teks tebal?",
+      "choices": ["<bold>", "<strong>", "<text>", "<bld>"],
+      "answer": "<strong>"
+    },
+    {
+      "question": "Apa fungsi dari console.log()?",
+      "choices": [
+        "Menghapus data",
+        "Menampilkan pesan di console",
+        "Membuat objek",
+        "Menambah data"
+      ],
+      "answer": "Menampilkan pesan di console"
+    },
+    {
+      "question": "Apa itu DOM?",
+      "choices": [
+        "Database Object Mode",
+        "Document Object Model",
+        "Data of Module",
+        "Design Output Module"
+      ],
+      "answer": "Document Object Model"
+    },
+    {
+      "question": "HTML dibuat oleh?",
+      "choices": [
+        "Tim Berners-Lee",
+        "Bill Gates",
+        "Mark Zuckerberg",
+        "Elon Musk"
+      ],
+      "answer": "Tim Berners-Lee"
+    },
+    {
+      "question": "Perintah JavaScript untuk kondisi?",
+      "choices": ["if", "switch", "for", "while"],
+      "answer": "if"
+    },
+    {
+      "question": "Manakah berikut yang bukan elemen HTML?",
+      "choices": ["<div>", "<span>", "<section>", "<python>"],
+      "answer": "<python>"
+    },
+    {
+      "question": "Apa itu hosting?",
+      "choices": [
+        "Tempat menyimpan website",
+        "Alamat email",
+        "Jenis browser",
+        "Kode program"
+      ],
+      "answer": "Tempat menyimpan website"
+    },
+    {
+      "question": "Apa itu CSS inline?",
+      "choices": [
+        "CSS di file terpisah",
+        "CSS ditulis dalam tag HTML",
+        "CSS dari server",
+        "CSS otomatis"
+      ],
+      "answer": "CSS ditulis dalam tag HTML"
+    },
+    {
+      "question": "Apa arti tag <h1> sampai <h6>?",
+      "choices": ["Link", "Heading", "Garis", "Tabel"],
+      "answer": "Heading"
+    },
+    {
+      "question": "Untuk apa tag <form> digunakan?",
+      "choices": [
+        "Menampilkan teks",
+        "Menambahkan gambar",
+        "Membuat formulir",
+        "Menulis CSS"
+      ],
+      "answer": "Membuat formulir"
+    },
+    {
+      "question": "JavaScript berjalan di mana?",
+      "choices": ["Server", "Database", "Browser", "Terminal"],
+      "answer": "Browser"
+    },
+    {
+      "question": "Apa itu tag <meta>?",
+      "choices": [
+        "Menampilkan gambar",
+        "Menambahkan link",
+        "Menyimpan metadata",
+        "Membuat paragraf"
+      ],
+      "answer": "Menyimpan metadata"
+    },
+    {
+      "question": "Manakah yang bukan bahasa markup?",
+      "choices": ["HTML", "XML", "CSS", "Markdown"],
+      "answer": "CSS"
+    },
+    {
+      "question": "Apa itu comment di HTML?",
+      "choices": [
+        "<-- komentar -->",
+        "<!-- komentar -->",
+        "// komentar",
+        "# komentar"
+      ],
+      "answer": "<!-- komentar -->"
+    },
+    {
+      "question": "Apa itu responsive design?",
+      "choices": [
+        "Desain cepat",
+        "Desain menarik",
+        "Desain untuk semua ukuran layar",
+        "Desain statis"
+      ],
+      "answer": "Desain untuk semua ukuran layar"
+    },
+    {
+      "question": "Manakah tools untuk kontrol versi?",
+      "choices": ["VS Code", "Figma", "Git", "XAMPP"],
+      "answer": "Git"
+    },
+    {
+      "question": "Apa itu tag <script>?",
+      "choices": [
+        "Untuk CSS",
+        "Untuk HTML",
+        "Untuk JavaScript",
+        "Untuk gambar"
+      ],
+      "answer": "Untuk JavaScript"
+    },
+    {
+      "question": "Bahasa pemrograman apa yang bisa digunakan di frontend dan backend?",
+      "choices": ["JavaScript", "Python", "C++", "PHP"],
+      "answer": "JavaScript"
+    },
+    {
+      "question": "Apa nama file utama HTML biasanya?",
+      "choices": ["main.html", "start.html", "index.html", "home.html"],
+      "answer": "index.html"
+    },
+    {
+      "question": "Tag untuk paragraf di HTML?",
+      "choices": ["<paragraph>", "<text>", "<p>", "<para>"],
+      "answer": "<p>"
+    }
+  ],
+  "medium": [
+    {
+      "question": "Apa perbedaan antara '==' dan '===' di JavaScript?",
+      "choices": [
+        "Tidak ada perbedaan",
+        "=== lebih cepat",
+        "=== memeriksa tipe data",
+        "== untuk angka saja"
+      ],
+      "answer": "=== memeriksa tipe data"
+    },
+    {
+      "question": "Manakah yang bukan HTTP status code?",
+      "choices": [
+        "404 Not Found",
+        "500 Internal Server Error",
+        "302 Redirect",
+        "777 Lucky Number"
+      ],
+      "answer": "777 Lucky Number"
+    },
+    {
+      "question": "Apa itu REST API?",
+      "choices": [
+        "Database server",
+        "Arsitektur web service",
+        "Framework JavaScript",
+        "Text editor"
+      ],
+      "answer": "Arsitektur web service"
+    },
+    {
+      "question": "Fungsi dari middleware dalam Express.js?",
+      "choices": [
+        "Menyimpan data",
+        "Memproses request/response",
+        "Mengatur database",
+        "Membuat UI"
+      ],
+      "answer": "Memproses request/response"
+    },
+    {
+      "question": "Apa itu Docker?",
+      "choices": [
+        "Text editor",
+        "Containerization platform",
+        "Database",
+        "Programming language"
+      ],
+      "answer": "Containerization platform"
+    },
+    {
+      "question": "Apa itu JSON?",
+      "choices": [
+        "JavaScript Object Notation",
+        "Java Standard Object Network",
+        "Just Simple Object Names",
+        "JavaScript Online Network"
+      ],
+      "answer": "JavaScript Object Notation"
+    },
+    {
+      "question": "Metode HTTP mana yang digunakan untuk mengupdate data?",
+      "choices": ["GET", "POST", "PUT", "DELETE"],
+      "answer": "PUT"
+    },
+    {
+      "question": "Apa fungsi dari npm dalam Node.js?",
+      "choices": [
+        "Node Package Manager",
+        "New Programming Method",
+        "Network Protocol Manager",
+        "Node Process Monitor"
+      ],
+      "answer": "Node Package Manager"
+    },
+    {
+      "question": "Apa itu callback function di JavaScript?",
+      "choices": [
+        "Fungsi yang dipanggil kembali",
+        "Fungsi utama",
+        "Fungsi untuk validasi",
+        "Fungsi bawaan"
+      ],
+      "answer": "Fungsi yang dipanggil kembali"
+    },
+    {
+      "question": "Apa peran Webpack dalam pengembangan aplikasi web?",
+      "choices": [
+        "Membuat database",
+        "Mengatur tampilan",
+        "Bundling modul",
+        "Menjalankan server"
+      ],
+      "answer": "Bundling modul"
+    },
+    {
+      "question": "Apa itu promise di JavaScript?",
+      "choices": [
+        "Sebuah event",
+        "Sebuah variable",
+        "Sebuah object untuk asynchronous",
+        "Sebuah function"
+      ],
+      "answer": "Sebuah object untuk asynchronous"
+    },
+    {
+      "question": "Apa kegunaan `useState` dalam React?",
+      "choices": [
+        "Menyimpan state lokal",
+        "Mengatur style",
+        "Memanggil API",
+        "Menghubungkan database"
+      ],
+      "answer": "Menyimpan state lokal"
+    },
+    {
+      "question": "Apa itu SSR (Server Side Rendering)?",
+      "choices": [
+        "Render di client",
+        "Render di server",
+        "Render di database",
+        "Render di API"
+      ],
+      "answer": "Render di server"
+    },
+    {
+      "question": "Apa yang dimaksud dengan state management?",
+      "choices": [
+        "Mengatur tampilan",
+        "Mengatur data aplikasi",
+        "Mengatur server",
+        "Mengatur jaringan"
+      ],
+      "answer": "Mengatur data aplikasi"
+    },
+    {
+      "question": "Apa itu CRUD?",
+      "choices": [
+        "Create, Read, Update, Delete",
+        "Call, Run, Update, Debug",
+        "Create, Return, Use, Deploy",
+        "Connect, Run, Use, Debug"
+      ],
+      "answer": "Create, Read, Update, Delete"
+    },
+    {
+      "question": "Apa perbedaan antara SQL dan NoSQL?",
+      "choices": [
+        "SQL lebih lambat",
+        "NoSQL untuk relasi",
+        "SQL untuk relasi, NoSQL untuk dokumen",
+        "NoSQL lebih kompleks"
+      ],
+      "answer": "SQL untuk relasi, NoSQL untuk dokumen"
+    },
+    {
+      "question": "Apa itu MVC?",
+      "choices": [
+        "Model View Controller",
+        "Main Visual Code",
+        "Manage Visual Component",
+        "Multi View Console"
+      ],
+      "answer": "Model View Controller"
+    },
+    {
+      "question": "Manakah yang merupakan web framework untuk Node.js?",
+      "choices": ["Django", "Flask", "Express", "Spring Boot"],
+      "answer": "Express"
+    },
+    {
+      "question": "Apa itu component dalam React?",
+      "choices": [
+        "Sebuah halaman",
+        "Sebuah modul CSS",
+        "Bagian UI yang dapat digunakan kembali",
+        "Database"
+      ],
+      "answer": "Bagian UI yang dapat digunakan kembali"
+    },
+    {
+      "question": "Apa fungsi dari `useEffect` dalam React?",
+      "choices": [
+        "Mengubah tampilan",
+        "Menambahkan efek animasi",
+        "Menjalankan side effect",
+        "Menyimpan data"
+      ],
+      "answer": "Menjalankan side effect"
+    },
+    {
+      "question": "Apa itu DOM?",
+      "choices": [
+        "Database Online Management",
+        "Document Object Model",
+        "Document Organizer Module",
+        "Data Output Management"
+      ],
+      "answer": "Document Object Model"
+    },
+    {
+      "question": "Apa itu JWT?",
+      "choices": [
+        "Java Web Token",
+        "JavaScript Web Tool",
+        "JSON Web Token",
+        "Java Working Template"
+      ],
+      "answer": "JSON Web Token"
+    },
+    {
+      "question": "Apa itu CORS?",
+      "choices": [
+        "Cross-Origin Resource Sharing",
+        "Client Online Resource System",
+        "Cloud-Origin Routing System",
+        "Centralized Object Resource Sharing"
+      ],
+      "answer": "Cross-Origin Resource Sharing"
+    },
+    {
+      "question": "Perintah git untuk membuat branch baru?",
+      "choices": [
+        "git branch <nama>",
+        "git init <nama>",
+        "git start <nama>",
+        "git new <nama>"
+      ],
+      "answer": "git branch <nama>"
+    },
+    {
+      "question": "Apa kegunaan CLI?",
+      "choices": [
+        "Menampilkan UI",
+        "Memberikan antarmuka berbasis teks",
+        "Membuka file Excel",
+        "Menjalankan animasi"
+      ],
+      "answer": "Memberikan antarmuka berbasis teks"
+    },
+    {
+      "question": "Apa itu API key?",
+      "choices": [
+        "Kunci login",
+        "Kunci database",
+        "Kunci untuk akses API",
+        "Kunci untuk enkripsi"
+      ],
+      "answer": "Kunci untuk akses API"
+    },
+    {
+      "question": "Apa perbedaan let dan var di JavaScript?",
+      "choices": [
+        "Tidak ada",
+        "let hanya di Python",
+        "var lebih cepat",
+        "let memiliki block scope"
+      ],
+      "answer": "let memiliki block scope"
+    },
+    {
+      "question": "Apa itu SSR dalam Next.js?",
+      "choices": [
+        "Server Side Rendering",
+        "Single Site Routing",
+        "Secure Server Route",
+        "Server Site Reporting"
+      ],
+      "answer": "Server Side Rendering"
+    },
+    {
+      "question": "Manakah bukan merupakan method array JavaScript?",
+      "choices": ["map()", "filter()", "reduce()", "split()"],
+      "answer": "split()"
+    },
+    {
+      "question": "Perintah untuk menghapus branch di Git?",
+      "choices": [
+        "git delete",
+        "git branch -d <nama>",
+        "git remove",
+        "git rm branch"
+      ],
+      "answer": "git branch -d <nama>"
+    },
+    {
+      "question": "Apa kegunaan fetch() di JavaScript?",
+      "choices": [
+        "Memanggil database",
+        "Mengambil data dari server",
+        "Membuat elemen HTML",
+        "Mengatur style"
+      ],
+      "answer": "Mengambil data dari server"
+    },
+    {
+      "question": "Perintah git untuk menggabungkan branch?",
+      "choices": ["git merge", "git connect", "git combine", "git join"],
+      "answer": "git merge"
+    },
+    {
+      "question": "Apa itu hook di React?",
+      "choices": [
+        "Library CSS",
+        "Function khusus untuk fitur React",
+        "File konfigurasi",
+        "Struktur folder"
+      ],
+      "answer": "Function khusus untuk fitur React"
+    },
+    {
+      "question": "Apa itu TypeScript?",
+      "choices": [
+        "Framework JavaScript",
+        "Database",
+        "Superset dari JavaScript",
+        "Browser"
+      ],
+      "answer": "Superset dari JavaScript"
+    },
+    {
+      "question": "Apa itu virtual DOM?",
+      "choices": [
+        "DOM di database",
+        "DOM di UI asli",
+        "Representasi ringan dari DOM asli",
+        "DOM pada CSS"
+      ],
+      "answer": "Representasi ringan dari DOM asli"
+    },
+    {
+      "question": "Apa itu Axios?",
+      "choices": [
+        "Framework UI",
+        "Tool database",
+        "Library HTTP client",
+        "Package manajer"
+      ],
+      "answer": "Library HTTP client"
+    },
+    {
+      "question": "Bagaimana cara menangani error pada async/await?",
+      "choices": ["try/catch", "if/else", "while loop", "callback"],
+      "answer": "try/catch"
+    },
+    {
+      "question": "Apa itu session di web?",
+      "choices": [
+        "Penyimpanan sementara pengguna",
+        "Halaman login",
+        "Pengaturan cookie",
+        "Token enkripsi"
+      ],
+      "answer": "Penyimpanan sementara pengguna"
+    },
+    {
+      "question": "Apa fungsi git init?",
+      "choices": [
+        "Membuat file",
+        "Menjalankan server",
+        "Memulai repository Git",
+        "Upload ke GitHub"
+      ],
+      "answer": "Memulai repository Git"
+    },
+    {
+      "question": "Apa perbedaan POST dan PUT dalam HTTP?",
+      "choices": [
+        "POST untuk update, PUT untuk create",
+        "PUT untuk create data baru",
+        "POST untuk create, PUT untuk update",
+        "Tidak ada perbedaan"
+      ],
+      "answer": "POST untuk create, PUT untuk update"
+    },
+    {
+      "question": "Apa itu SSL?",
+      "choices": [
+        "Secure Scripting Language",
+        "Structured Secure Layer",
+        "Secure Socket Layer",
+        "Script Security Level"
+      ],
+      "answer": "Secure Socket Layer"
+    },
+    {
+      "question": "Apa itu git pull?",
+      "choices": [
+        "Menghapus branch",
+        "Menambahkan file",
+        "Mengambil perubahan dari remote",
+        "Menjalankan merge lokal"
+      ],
+      "answer": "Mengambil perubahan dari remote"
+    },
+    {
+      "question": "Fungsi utama dari Babel?",
+      "choices": [
+        "Menjalankan database",
+        "Transpile JavaScript modern ke kompatibel",
+        "Mengatur style",
+        "Mengatur package"
+      ],
+      "answer": "Transpile JavaScript modern ke kompatibel"
+    },
+    {
+      "question": "Perintah untuk melihat semua branch di Git?",
+      "choices": ["git show", "git list", "git branch", "git tree"],
+      "answer": "git branch"
+    },
+    {
+      "question": "Apa itu responsive web design?",
+      "choices": [
+        "Web dengan banyak halaman",
+        "Web yang cepat",
+        "Web yang bisa menyesuaikan tampilan",
+        "Web dengan banyak warna"
+      ],
+      "answer": "Web yang bisa menyesuaikan tampilan"
+    },
+    {
+      "question": "Apa itu CDN?",
+      "choices": [
+        "Content Delivery Network",
+        "Central Data Network",
+        "Client Dynamic Network",
+        "Code Development Network"
+      ],
+      "answer": "Content Delivery Network"
+    }
+  ],
+  "hard": [
+    {
+      "question": "Apa itu Big O notation?",
+      "choices": [
+        "Bahasa pemrograman",
+        "Kompleksitas algoritma",
+        "Framework web",
+        "Database query"
+      ],
+      "answer": "Kompleksitas algoritma"
+    },
+    {
+      "question": "Manakah design pattern yang menggunakan satu instance?",
+      "choices": ["Factory", "Observer", "Singleton", "Strategy"],
+      "answer": "Singleton"
+    },
+    {
+      "question": "Apa itu GraphQL?",
+      "choices": [
+        "Database",
+        "Query language untuk API",
+        "Framework CSS",
+        "Testing library"
+      ],
+      "answer": "Query language untuk API"
+    },
+    {
+      "question": "Konsep apa yang digunakan dalam functional programming?",
+      "choices": [
+        "Inheritance",
+        "Polymorphism",
+        "Immutability",
+        "Encapsulation"
+      ],
+      "answer": "Immutability"
+    },
+    {
+      "question": "Apa itu Microservices architecture?",
+      "choices": [
+        "Single large application",
+        "Small independent services",
+        "Database design",
+        "UI framework"
+      ],
+      "answer": "Small independent services"
+    },
+    {
+      "question": "Apa itu Event Loop dalam JavaScript?",
+      "choices": [
+        "Struktur data",
+        "Mekanisme asynchronous",
+        "Framework testing",
+        "Database connection"
+      ],
+      "answer": "Mekanisme asynchronous"
+    },
+    {
+      "question": "Prinsip SOLID dalam programming, apa arti dari 'S'?",
+      "choices": [
+        "Scalability",
+        "Single Responsibility",
+        "Security",
+        "Simplicity"
+      ],
+      "answer": "Single Responsibility"
+    },
+    {
+      "question": "Apa itu Time Complexity O(log n)?",
+      "choices": [
+        "Linear time",
+        "Logarithmic time",
+        "Constant time",
+        "Quadratic time"
+      ],
+      "answer": "Logarithmic time"
+    },
+    {
+      "question": "Apa tujuan utama dari normalization dalam database?",
+      "choices": [
+        "Mempercepat query",
+        "Mengurangi redundansi data",
+        "Meningkatkan ukuran database",
+        "Membuat data menjadi kompleks"
+      ],
+      "answer": "Mengurangi redundansi data"
+    },
+    {
+      "question": "Apa fungsi utama dari garbage collection dalam bahasa pemrograman?",
+      "choices": [
+        "Mengelola memori secara otomatis",
+        "Mempercepat eksekusi program",
+        "Mengoptimalkan database",
+        "Membuat UI lebih responsif"
+      ],
+      "answer": "Mengelola memori secara otomatis"
+    },
+    {
+      "question": "Apa itu REST dalam konteks pengembangan API?",
+      "choices": [
+        "Representational State Transfer",
+        "Remote Server Technology",
+        "Rapid Software Testing",
+        "Reusable Service Template"
+      ],
+      "answer": "Representational State Transfer"
+    },
+    {
+      "question": "Manakah dari berikut ini adalah bahasa pemrograman functional?",
+      "choices": ["Java", "Haskell", "C++", "PHP"],
+      "answer": "Haskell"
+    },
+    {
+      "question": "Apa tujuan utama penggunaan Docker?",
+      "choices": [
+        "Virtualisasi penuh sistem operasi",
+        "Containerization aplikasi",
+        "Pengembangan frontend",
+        "Manajemen database"
+      ],
+      "answer": "Containerization aplikasi"
+    },
+    {
+      "question": "Apa itu deadlock dalam konteks sistem operasi?",
+      "choices": [
+        "Proses yang berjalan tanpa henti",
+        "Kondisi saling menunggu antar proses",
+        "Proses yang sudah selesai",
+        "Memori yang bocor"
+      ],
+      "answer": "Kondisi saling menunggu antar proses"
+    },
+    {
+      "question": "Apa fungsi dari load balancer?",
+      "choices": [
+        "Menyimpan data sementara",
+        "Mendistribusikan trafik ke beberapa server",
+        "Mengamankan jaringan",
+        "Mengkompres file"
+      ],
+      "answer": "Mendistribusikan trafik ke beberapa server"
+    },
+    {
+      "question": "Apa itu middleware dalam konteks web development?",
+      "choices": [
+        "Komponen frontend",
+        "Lapisan penghubung antara request dan response",
+        "Database management tool",
+        "Bahasa pemrograman"
+      ],
+      "answer": "Lapisan penghubung antara request dan response"
+    },
+    {
+      "question": "Apa yang dimaksud dengan polymorphism dalam OOP?",
+      "choices": [
+        "Kemampuan objek untuk mengambil banyak bentuk",
+        "Pewarisan kelas",
+        "Enkapsulasi data",
+        "Membuat objek baru"
+      ],
+      "answer": "Kemampuan objek untuk mengambil banyak bentuk"
+    },
+    {
+      "question": "Apa itu caching dalam konteks web?",
+      "choices": [
+        "Menyimpan data untuk akses cepat",
+        "Menghapus data lama",
+        "Menyimpan log aktivitas",
+        "Memproses permintaan"
+      ],
+      "answer": "Menyimpan data untuk akses cepat"
+    },
+    {
+      "question": "Apa fungsi utama Continuous Integration (CI)?",
+      "choices": [
+        "Mengintegrasikan fitur baru secara manual",
+        "Menguji dan menggabungkan kode secara otomatis",
+        "Menghapus bug secara otomatis",
+        "Membuat dokumentasi kode"
+      ],
+      "answer": "Menguji dan menggabungkan kode secara otomatis"
+    },
+    {
+      "question": "Apa itu CAP theorem dalam sistem terdistribusi?",
+      "choices": [
+        "Consistency, Availability, Partition tolerance",
+        "Cache, Access, Performance",
+        "Control, Access, Privacy",
+        "Consistency, Accuracy, Performance"
+      ],
+      "answer": "Consistency, Availability, Partition tolerance"
+    },
+    {
+      "question": "Apa itu dead code?",
+      "choices": [
+        "Kode yang tidak pernah dijalankan",
+        "Kode yang error",
+        "Kode yang sangat efisien",
+        "Kode yang ditulis untuk dokumentasi"
+      ],
+      "answer": "Kode yang tidak pernah dijalankan"
+    },
+    {
+      "question": "Apa itu dependency injection?",
+      "choices": [
+        "Membuat dependensi sendiri",
+        "Menyuntikkan dependensi dari luar ke dalam objek",
+        "Menghapus dependensi",
+        "Mengoptimalkan kode"
+      ],
+      "answer": "Menyuntikkan dependensi dari luar ke dalam objek"
+    },
+    {
+      "question": "Apa itu JWT (JSON Web Token)?",
+      "choices": [
+        "Format token untuk autentikasi",
+        "Bahasa pemrograman",
+        "Database NoSQL",
+        "Framework frontend"
+      ],
+      "answer": "Format token untuk autentikasi"
+    },
+    {
+      "question": "Apa yang dimaksud dengan 'idempotent' dalam konteks API?",
+      "choices": [
+        "Permintaan dapat dilakukan berkali-kali dengan hasil sama",
+        "API yang cepat",
+        "API yang aman",
+        "API yang menggunakan JSON"
+      ],
+      "answer": "Permintaan dapat dilakukan berkali-kali dengan hasil sama"
+    },
+    {
+      "question": "Apa itu deadlock prevention?",
+      "choices": [
+        "Menghindari kondisi deadlock dengan strategi tertentu",
+        "Mengatasi deadlock setelah terjadi",
+        "Mengabaikan deadlock",
+        "Mengoptimalkan kode agar cepat"
+      ],
+      "answer": "Menghindari kondisi deadlock dengan strategi tertentu"
+    },
+    {
+      "question": "Apa fungsi utama dari load testing?",
+      "choices": [
+        "Mengukur performa aplikasi di bawah beban tertentu",
+        "Menghapus bug",
+        "Menguji UI",
+        "Menguji keamanan"
+      ],
+      "answer": "Mengukur performa aplikasi di bawah beban tertentu"
+    },
+    {
+      "question": "Apa itu memoization dalam konteks algoritma?",
+      "choices": [
+        "Menyimpan hasil fungsi untuk menghindari komputasi ulang",
+        "Membuat kode menjadi modular",
+        "Mengurangi ukuran program",
+        "Meningkatkan keamanan"
+      ],
+      "answer": "Menyimpan hasil fungsi untuk menghindari komputasi ulang"
+    },
+    {
+      "question": "Apa itu Agile dalam pengembangan perangkat lunak?",
+      "choices": [
+        "Metode pengembangan iteratif dan incremental",
+        "Bahasa pemrograman baru",
+        "Database management system",
+        "Framework frontend"
+      ],
+      "answer": "Metode pengembangan iteratif dan incremental"
+    },
+    {
+      "question": "Apa itu OAuth?",
+      "choices": [
+        "Protokol otorisasi",
+        "Bahasa pemrograman",
+        "Framework backend",
+        "Tool testing"
+      ],
+      "answer": "Protokol otorisasi"
+    },
+    {
+      "question": "Apa fungsi utama DNS dalam jaringan?",
+      "choices": [
+        "Menerjemahkan nama domain ke alamat IP",
+        "Mengatur firewall",
+        "Menyimpan data pengguna",
+        "Mengoptimalkan bandwidth"
+      ],
+      "answer": "Menerjemahkan nama domain ke alamat IP"
+    },
+    {
+      "question": "Apa itu middleware dalam konteks Express.js?",
+      "choices": [
+        "Fungsi yang menangani request dan response",
+        "Database",
+        "Framework CSS",
+        "Bahasa pemrograman"
+      ],
+      "answer": "Fungsi yang menangani request dan response"
+    },
+    {
+      "question": "Apa itu race condition?",
+      "choices": [
+        "Kondisi dimana dua proses mengakses data secara bersamaan dan menyebabkan error",
+        "Kondisi sistem overload",
+        "Kode yang berjalan lambat",
+        "Kesalahan syntax"
+      ],
+      "answer": "Kondisi dimana dua proses mengakses data secara bersamaan dan menyebabkan error"
+    },
+    {
+      "question": "Apa itu blockchain?",
+      "choices": [
+        "Database terdistribusi dan terenkripsi",
+        "Bahasa pemrograman",
+        "Framework web",
+        "Server database"
+      ],
+      "answer": "Database terdistribusi dan terenkripsi"
+    },
+    {
+      "question": "Apa itu TLS dalam keamanan jaringan?",
+      "choices": [
+        "Protokol enkripsi untuk komunikasi aman",
+        "Bahasa pemrograman",
+        "Database",
+        "Firewall"
+      ],
+      "answer": "Protokol enkripsi untuk komunikasi aman"
+    },
+    {
+      "question": "Apa perbedaan antara SQL dan NoSQL?",
+      "choices": [
+        "SQL untuk data relasional, NoSQL untuk data non-relasional",
+        "SQL lebih cepat dari NoSQL",
+        "NoSQL menggunakan bahasa pemrograman khusus",
+        "SQL tidak bisa query data"
+      ],
+      "answer": "SQL untuk data relasional, NoSQL untuk data non-relasional"
+    },
+    {
+      "question": "Apa itu event bubbling dalam DOM?",
+      "choices": [
+        "Proses propagasi event dari elemen anak ke induk",
+        "Membuat event baru",
+        "Menghapus event listener",
+        "Event yang tidak berfungsi"
+      ],
+      "answer": "Proses propagasi event dari elemen anak ke induk"
+    },
+    {
+      "question": "Apa itu memoization?",
+      "choices": [
+        "Caching hasil fungsi untuk efisiensi",
+        "Membuat UI dinamis",
+        "Mempercepat query database",
+        "Metode debugging"
+      ],
+      "answer": "Caching hasil fungsi untuk efisiensi"
+    },
+    {
+      "question": "Apa itu OAuth2?",
+      "choices": [
+        "Protokol otorisasi yang lebih aman",
+        "Bahasa pemrograman",
+        "Database",
+        "Framework frontend"
+      ],
+      "answer": "Protokol otorisasi yang lebih aman"
+    },
+    {
+      "question": "Apa itu horizontal scaling?",
+      "choices": [
+        "Menambah jumlah server",
+        "Meningkatkan kapasitas server tunggal",
+        "Mengurangi jumlah server",
+        "Membagi database"
+      ],
+      "answer": "Menambah jumlah server"
+    },
+    {
+      "question": "Apa itu vertical scaling?",
+      "choices": [
+        "Meningkatkan kapasitas server tunggal",
+        "Menambah jumlah server",
+        "Menghapus server",
+        "Membagi database"
+      ],
+      "answer": "Meningkatkan kapasitas server tunggal"
+    },
+    {
+      "question": "Apa fungsi utama CDN (Content Delivery Network)?",
+      "choices": [
+        "Mengirimkan konten lebih cepat ke pengguna",
+        "Menyimpan data pengguna",
+        "Mengoptimalkan database",
+        "Membuat aplikasi mobile"
+      ],
+      "answer": "Mengirimkan konten lebih cepat ke pengguna"
+    },
+    {
+      "question": "Apa itu refactoring dalam pengembangan perangkat lunak?",
+      "choices": [
+        "Memperbaiki struktur kode tanpa mengubah fungsionalitas",
+        "Menambahkan fitur baru",
+        "Menghapus kode lama",
+        "Mengoptimalkan database"
+      ],
+      "answer": "Memperbaiki struktur kode tanpa mengubah fungsionalitas"
+    },
+    {
+      "question": "Apa itu SQL injection?",
+      "choices": [
+        "Serangan dengan menyisipkan perintah SQL berbahaya",
+        "Backup database",
+        "Optimasi query",
+        "Pemrograman backend"
+      ],
+      "answer": "Serangan dengan menyisipkan perintah SQL berbahaya"
+    },
+    {
+      "question": "Apa itu cross-site scripting (XSS)?",
+      "choices": [
+        "Serangan memasukkan kode jahat ke dalam website",
+        "Proses debugging",
+        "Optimasi website",
+        "Backup website"
+      ],
+      "answer": "Serangan memasukkan kode jahat ke dalam website"
+    },
+    {
+      "question": "Apa itu singleton pattern?",
+      "choices": [
+        "Desain pattern memastikan hanya satu instance objek",
+        "Desain pattern untuk banyak objek",
+        "Framework frontend",
+        "Database"
+      ],
+      "answer": "Desain pattern memastikan hanya satu instance objek"
+    },
+    {
+      "question": "Apa itu MVC?",
+      "choices": [
+        "Model View Controller, pola desain aplikasi",
+        "Bahasa pemrograman",
+        "Database",
+        "Framework frontend"
+      ],
+      "answer": "Model View Controller, pola desain aplikasi"
+    },
+    {
+      "question": "Apa itu deadlock?",
+      "choices": [
+        "Kondisi di mana dua proses saling menunggu dan tidak bisa lanjut",
+        "Error syntax",
+        "Kode berjalan lambat",
+        "Database crash"
+      ],
+      "answer": "Kondisi di mana dua proses saling menunggu dan tidak bisa lanjut"
+    },
+    {
+      "question": "Apa itu binary search?",
+      "choices": [
+        "Algoritma pencarian dengan membagi dua data",
+        "Algoritma sorting",
+        "Metode hashing",
+        "Database query"
+      ],
+      "answer": "Algoritma pencarian dengan membagi dua data"
+    },
+    {
+      "question": "Apa itu recursion?",
+      "choices": [
+        "Fungsi yang memanggil dirinya sendiri",
+        "Looping biasa",
+        "Pemanggilan database",
+        "Pengolahan gambar"
+      ],
+      "answer": "Fungsi yang memanggil dirinya sendiri"
+    }
+  ]
+}
